@@ -30,6 +30,7 @@ using namespace OpenMesh;
 
 GLFWwindow* window;
 const string mesh_path = "../../data/model/Armadillo.obj";
+const string save_path = "../../data/save/save.obj";
 const string mf_path = "./main.fs", mv_path = "./main.vs";
 const string wf_path = "./wire.fs", wv_path = "./wire.vs";
 const string af_path = "./anchor.fs", av_path = "./anchor.vs";
@@ -323,6 +324,15 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
 			}
 		}
 	}
+	else {
+		if (action == GLFW_RELEASE) {
+			if (!IO::write_mesh(result_mesh, save_path)) {
+				cout << "write obj error" << endl;
+				return;
+			}
+			cout << "write to " << save_path << endl;
+		}
+	}
 }
 void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
 	if (drag) {
@@ -515,7 +525,7 @@ void out(glm::mat4 &m) {
 }
 
 int main() {
-	if (!OpenMesh::IO::read_mesh(origin_mesh, mesh_path) || !OpenMesh::IO::read_mesh(result_mesh, mesh_path)) {
+	if (!IO::read_mesh(origin_mesh, mesh_path) || !OpenMesh::IO::read_mesh(result_mesh, mesh_path)) {
 		cout << "read error";
 		return 0;
 	}
