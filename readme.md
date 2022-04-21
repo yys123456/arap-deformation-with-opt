@@ -2,7 +2,7 @@
 
 ### prerequisite
 
-CUDA9.2 + vs2017
+CUDA9.2，vs2017，opengl4.5，OpenMesh
 
 ### Get it work
 
