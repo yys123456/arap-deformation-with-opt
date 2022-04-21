@@ -12,5 +12,11 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
 4. add Opt.h to `include`, Opt.dll to source file path, Opt.lib to `lib`
 5. go to `arap.sln`, and hit the build button
 
+### Usage
 
+1. S, D: toggle select and deform mode
+
+2. W: toggle wire mode
+3. A: toggle anchor points
+4. mouse left/right/middle: drag mesh/(select, deform)/save mesh
 
