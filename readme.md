@@ -20,3 +20,4 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
 3. A: toggle anchor points
 4. mouse left/right/middle: drag mesh/(select, deform)/save mesh
 
+<img src = "https://i.imgur.com/5rRk8pQ.gif" >
