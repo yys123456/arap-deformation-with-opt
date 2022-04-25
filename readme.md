@@ -4,7 +4,7 @@
 
 CUDA9.2，vs2017，opengl4.5，OpenMesh
 
-### Get it work
+### Get it working
 
 1. add terra/bin to system path
 2. go to `terra/share/terra/tests/` and test if terra can work properly (especially those start with cuda...)
