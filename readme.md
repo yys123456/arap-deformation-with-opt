@@ -23,25 +23,16 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
 
 1. dragging vertices too far away from their current position is not recommended
 2. fitting weight and regularization weight can be changed to view different impact of them on the deformation
-
-<table>
-    <tr>
-        <td>
 <!-- <img src = "https://i.imgur.com/5rRk8pQ.gif">-->
-<figure>
-<img src  ="https://i.imgur.com/zjkJxL3.gif">
-            <figcaption align = "center"><b>Fitting=0.625</b></figcaption>
-</figure>
-        </td>
-        <td>
-		<figure>
-<img src  ="https://i.imgur.com/GtoinH3.gif">
-            <figcaption align = "center"><b>Fitting=1</b></figcaption>
-</figure>
-        </td>
-    </tr>
-</table>
 
+<p align="center">
+  <img src="https://i.imgur.com/zjkJxL3.gif" />
+   <figcaption align = "center"><b>Fitting=0.625</b></figcaption>
+</p>
+<p align="center">
+	<img src  ="https://i.imgur.com/GtoinH3.gif">
+    <figcaption align = "center"><b>Fitting=1</b></figcaption>
+</p>
 
 
 
