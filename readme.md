@@ -25,14 +25,24 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
 2. fitting weight and regularization weight can be changed to view different impact of them on the deformation
 <!-- <img src = "https://i.imgur.com/5rRk8pQ.gif">-->
 
-<p align="center">
-  <img src="https://i.imgur.com/zjkJxL3.gif" />
-   <figcaption align = "center"><b>Fitting=0.625</b></figcaption>
-</p>
-<p align="center">
-	<img src  ="https://i.imgur.com/GtoinH3.gif">
-    <figcaption align = "center"><b>Fitting=1</b></figcaption>
-</p>
+<table style="text-align:center">
+     <tr>
+        <td>
+            fitting=0.625
+        </td>
+        <td>
+            fitting=1
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://i.imgur.com/zjkJxL3.gif" />
+        </td>
+        <td>
+            <img src  ="https://i.imgur.com/GtoinH3.gif">
+        </td>
+    </tr>
+</table>
 
 
 
