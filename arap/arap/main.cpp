@@ -112,6 +112,7 @@ void copy_to_device() {
 	for (auto v : origin_mesh.vertices())
 		vertices.push_back(origin_mesh.point(v));
 	cudaMemcpy(g_ref, vertices.data(), vertices.size() * sizeof(Vec3f), cudaMemcpyHostToDevice);
+	cudaMemcpy(g_offset, vertices.data(), vertices.size() * sizeof(Vec3f), cudaMemcpyHostToDevice); /*important!*/
 	cudaMemcpy(g_from, c_from.data(), c_from.size() * sizeof(int), cudaMemcpyHostToDevice);
 	cudaMemcpy(g_to, c_to.data(), c_to.size() * sizeof(int), cudaMemcpyHostToDevice);
 }
@@ -225,12 +226,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	}
 	if (key == GLFW_KEY_W && action == GLFW_RELEASE) wired ^= 1;
 	if (key == GLFW_KEY_A && action == GLFW_RELEASE) anced ^= 1;
-	if (key == GLFW_KEY_Z && action == GLFW_RELEASE) {
-		if (anchors.size()) {
-			for (auto t : anchors.back()) anchor_reg.erase(t);
-			anchors.pop_back();
-		}
-	}
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
@@ -356,7 +351,7 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
 		glm::vec2 drag_vec = glm::vec2(xpos - drag_start.x, drag_start.y - ypos);
 		glm::vec3 offset_vec = to_model * glm::vec3(drag_vec.x, drag_vec.y, 0);
 		
-		offset = Vec3f(offset_vec[0], offset_vec[1], offset_vec[2]) * 0.01;
+		offset = Vec3f(offset_vec[0], offset_vec[1], offset_vec[2]) * 0.001;
 		glBindBuffer(GL_ARRAY_BUFFER, mesh_vbo[0]);
 		float *model_vtx_ptr = (float*)glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 		for (auto i : anchors[group_id]) {
