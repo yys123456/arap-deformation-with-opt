@@ -21,6 +21,7 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
 
 ### Note
 
-Dragging vertices too far away from their current position is not recommended
+1. dragging vertices too far away from their current position is not recommended
+2. fitting weight and regularization weight can be changed to view different impact of them on the deformation
 
 <img src = "https://i.imgur.com/5rRk8pQ.gif" >
