@@ -36,10 +36,10 @@ CUDA9.2，vs2017，opengl4.5，OpenMesh
     </tr>
     <tr>
         <td>
-            <img src="https://i.imgur.com/zjkJxL3.gif" />
+            <img src="https://i.imgur.com/zjkJxL3.gif" width="300px" height="300px"/>
         </td>
         <td>
-            <img src  ="https://i.imgur.com/GtoinH3.gif">
+            <img src  ="https://i.imgur.com/GtoinH3.gif" width="300px" height="300px" >
         </td>
     </tr>
 </table>
